@@ -27,7 +27,7 @@ def get_tweet_data(card)
   begin
     date = card.find_element(:xpath, './/time').attribute("datetime")
   rescue Selenium::WebDriver::Error::NoSuchElementError
-    return
+    date = ""
   end
 
   begin
